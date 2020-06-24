@@ -149,6 +149,53 @@ public class principal extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel18 = new javax.swing.JPanel();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel52 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
+        jLabel53 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable6 = new javax.swing.JTable();
+        jPanel19 = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel59 = new javax.swing.JLabel();
+        jButton20 = new javax.swing.JButton();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTable7 = new javax.swing.JTable();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jTextField16 = new javax.swing.JTextField();
+        jLabel62 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1020, 640));
@@ -228,7 +275,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel9.setText("Usuarios Activos");
         jInternalFrame1.getContentPane().add(jLabel9);
-        jLabel9.setBounds(180, 90, 120, 16);
+        jLabel9.setBounds(180, 90, 120, 15);
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -244,7 +291,7 @@ public class principal extends javax.swing.JFrame {
         jScrollPane4.setViewportView(jTable4);
 
         jInternalFrame1.getContentPane().add(jScrollPane4);
-        jScrollPane4.setBounds(20, 120, 453, 270);
+        jScrollPane4.setBounds(20, 120, 452, 270);
 
         jButton1.setBackground(new java.awt.Color(0, 183, 183));
         jButton1.setFont(new java.awt.Font("Gill Sans MT", 1, 12)); // NOI18N
@@ -256,7 +303,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel29.setText("Correo Electrónico:");
         jPanel15.add(jLabel29);
-        jLabel29.setBounds(20, 230, 120, 16);
+        jLabel29.setBounds(20, 230, 120, 15);
 
         jTextFieldNombreUsuario.setText("Nombre del Empleado");
         jTextFieldNombreUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -269,7 +316,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel30.setText("Género:");
         jPanel15.add(jLabel30);
-        jLabel30.setBounds(30, 280, 60, 16);
+        jLabel30.setBounds(30, 280, 60, 15);
 
         jTextFieldNombreUsuario1.setText("CorreoElectrónico");
         jTextFieldNombreUsuario1.addActionListener(new java.awt.event.ActionListener() {
@@ -282,11 +329,11 @@ public class principal extends javax.swing.JFrame {
 
         jLabel31.setText("Número deTeléfono:");
         jPanel15.add(jLabel31);
-        jLabel31.setBounds(20, 180, 130, 16);
+        jLabel31.setBounds(20, 180, 130, 15);
 
         jLabel32.setText("UserID");
         jPanel15.add(jLabel32);
-        jLabel32.setBounds(280, 30, 48, 16);
+        jLabel32.setBounds(280, 30, 48, 15);
 
         jTextFieldNombreUsuario2.setText("Teléfono");
         jTextFieldNombreUsuario2.addActionListener(new java.awt.event.ActionListener() {
@@ -299,25 +346,25 @@ public class principal extends javax.swing.JFrame {
 
         BoxSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Género", "Masculino", "Femenino", " " }));
         jPanel15.add(BoxSexo);
-        BoxSexo.setBounds(140, 120, 160, 26);
+        BoxSexo.setBounds(140, 120, 160, 29);
 
         jLabel33.setText("Nombre:");
         jPanel15.add(jLabel33);
-        jLabel33.setBounds(20, 80, 60, 16);
+        jLabel33.setBounds(20, 80, 60, 15);
 
         jComboBoxEstadoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado del Usuario", "Activo", "Desactivo" }));
         jPanel15.add(jComboBoxEstadoUsuario);
-        jComboBoxEstadoUsuario.setBounds(140, 280, 130, 26);
+        jComboBoxEstadoUsuario.setBounds(140, 280, 130, 29);
 
         jLabel34.setText("Género:");
         jPanel15.add(jLabel34);
-        jLabel34.setBounds(20, 120, 60, 16);
+        jLabel34.setBounds(20, 120, 60, 15);
 
         jButton2.setBackground(new java.awt.Color(0, 183, 183));
         jButton2.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
         jButton2.setText("Guardar\n");
         jPanel15.add(jButton2);
-        jButton2.setBounds(140, 330, 71, 34);
+        jButton2.setBounds(140, 330, 72, 25);
 
         jInternalFrame1.getContentPane().add(jPanel15);
         jPanel15.setBounds(610, 10, 370, 380);
@@ -335,7 +382,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel35.setText("Correo Electrónico:");
         jPanel16.add(jLabel35);
-        jLabel35.setBounds(20, 230, 120, 16);
+        jLabel35.setBounds(20, 230, 120, 15);
 
         jTextFieldNombreUsuario3.setText("Nombre del Empleado");
         jTextFieldNombreUsuario3.addActionListener(new java.awt.event.ActionListener() {
@@ -348,7 +395,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel36.setText("Género:");
         jPanel16.add(jLabel36);
-        jLabel36.setBounds(30, 280, 60, 16);
+        jLabel36.setBounds(30, 280, 60, 15);
 
         jTextFieldNombreUsuario4.setText("CorreoElectrónico");
         jTextFieldNombreUsuario4.addActionListener(new java.awt.event.ActionListener() {
@@ -361,11 +408,11 @@ public class principal extends javax.swing.JFrame {
 
         jLabel37.setText("Número deTeléfono:");
         jPanel16.add(jLabel37);
-        jLabel37.setBounds(20, 180, 130, 16);
+        jLabel37.setBounds(20, 180, 130, 15);
 
         jLabel38.setText("UserID");
         jPanel16.add(jLabel38);
-        jLabel38.setBounds(280, 30, 48, 16);
+        jLabel38.setBounds(280, 30, 48, 15);
 
         jTextFieldNombreUsuario5.setText("Teléfono");
         jTextFieldNombreUsuario5.addActionListener(new java.awt.event.ActionListener() {
@@ -378,19 +425,19 @@ public class principal extends javax.swing.JFrame {
 
         BoxSexo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Género", "Masculino", "Femenino", " " }));
         jPanel16.add(BoxSexo1);
-        BoxSexo1.setBounds(140, 120, 160, 26);
+        BoxSexo1.setBounds(140, 120, 160, 29);
 
         jLabel39.setText("Nombre:");
         jPanel16.add(jLabel39);
-        jLabel39.setBounds(20, 80, 60, 16);
+        jLabel39.setBounds(20, 80, 60, 15);
 
         jComboBoxEstadoUsuario1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado del Usuario", "Activo", "Desactivo" }));
         jPanel16.add(jComboBoxEstadoUsuario1);
-        jComboBoxEstadoUsuario1.setBounds(140, 280, 130, 26);
+        jComboBoxEstadoUsuario1.setBounds(140, 280, 130, 29);
 
         jLabel40.setText("Género:");
         jPanel16.add(jLabel40);
-        jLabel40.setBounds(20, 120, 60, 16);
+        jLabel40.setBounds(20, 120, 60, 15);
 
         jInternalFrame2.getContentPane().add(jPanel16);
         jPanel16.setBounds(140, 10, 370, 380);
@@ -399,7 +446,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel41.setText("Confirme Contraseña:");
         jPanel17.add(jLabel41);
-        jLabel41.setBounds(20, 230, 140, 16);
+        jLabel41.setBounds(20, 230, 140, 15);
 
         jTextFieldNombreUsuario6.setText("Nombre del Empleado");
         jTextFieldNombreUsuario6.addActionListener(new java.awt.event.ActionListener() {
@@ -421,7 +468,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel43.setText("Contraseña:");
         jPanel17.add(jLabel43);
-        jLabel43.setBounds(20, 180, 130, 16);
+        jLabel43.setBounds(20, 180, 130, 15);
 
         jTextFieldNombreUsuario8.setText("Contraseña");
         jTextFieldNombreUsuario8.addActionListener(new java.awt.event.ActionListener() {
@@ -434,21 +481,21 @@ public class principal extends javax.swing.JFrame {
 
         BoxSexo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Privilegio", "Administrador", "Vendedor", " ", " " }));
         jPanel17.add(BoxSexo2);
-        BoxSexo2.setBounds(140, 120, 160, 26);
+        BoxSexo2.setBounds(140, 120, 160, 29);
 
         jLabel45.setText("Userame");
         jPanel17.add(jLabel45);
-        jLabel45.setBounds(20, 80, 60, 16);
+        jLabel45.setBounds(20, 80, 60, 15);
 
         jLabel46.setText("Privilegio");
         jPanel17.add(jLabel46);
-        jLabel46.setBounds(20, 120, 60, 16);
+        jLabel46.setBounds(20, 120, 60, 15);
 
         jButton4.setBackground(new java.awt.Color(0, 183, 183));
         jButton4.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
         jButton4.setText("Guardar\n");
         jPanel17.add(jButton4);
-        jButton4.setBounds(240, 300, 90, 34);
+        jButton4.setBounds(240, 300, 90, 25);
 
         jInternalFrame2.getContentPane().add(jPanel17);
         jPanel17.setBounds(550, 20, 370, 360);
@@ -483,6 +530,9 @@ public class principal extends javax.swing.JFrame {
             }
         });
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel2MouseExited(evt);
             }
@@ -536,6 +586,9 @@ public class principal extends javax.swing.JFrame {
             }
         });
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel6MouseExited(evt);
             }
@@ -659,7 +712,7 @@ public class principal extends javax.swing.JFrame {
                 .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51)
                 .addComponent(jButton9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton10)
                 .addContainerGap())
         );
@@ -728,7 +781,7 @@ public class principal extends javax.swing.JFrame {
                 .addComponent(jButton11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 386, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 403, Short.MAX_VALUE)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -868,7 +921,7 @@ public class principal extends javax.swing.JFrame {
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(97, 97, 97)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(87, 87, 87))
         );
@@ -993,7 +1046,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel23)
                     .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1006,7 +1059,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(jLabel18))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
@@ -1070,6 +1123,169 @@ public class principal extends javax.swing.JFrame {
         jTabbedPane1.addTab("DETALLE DE COMPRA", jPanel5);
 
         getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 1000, 450));
+
+        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel18.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 367, -1));
+        jPanel18.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, 52, -1));
+
+        jButton3.setText("Agregar Producto");
+        jPanel18.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 100, -1, -1));
+
+        jLabel50.setText("Producto");
+        jPanel18.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
+
+        jLabel51.setText("Cantidad");
+        jPanel18.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 80, -1, -1));
+
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        jPanel18.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 370, -1));
+
+        jLabel52.setText("Cliente");
+        jPanel18.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+
+        jButton13.setText("Nuevo Cliente");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        jPanel18.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 40, -1, -1));
+
+        jLabel53.setText("NIT");
+        jPanel18.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, -1, -1));
+
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
+        jPanel18.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, 120, 20));
+
+        jButton14.setText("Eliminar");
+        jButton14.setEnabled(false);
+        jPanel18.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 200, -1, -1));
+
+        jButton15.setText("CANCELAR");
+        jPanel18.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, -1, -1));
+
+        jButton16.setText("ACEPTAR");
+        jPanel18.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 340, -1, -1));
+
+        jLabel54.setText("TOTAL;");
+        jPanel18.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, -1, -1));
+
+        jLabel55.setBackground(new java.awt.Color(62, 59, 59));
+        jLabel55.setFont(new java.awt.Font("DejaVu Sans", 0, 36)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel55.setText("0.00");
+        jPanel18.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 160, 60));
+
+        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Producto", "Descripcion", "PrecioU", "Cantidad"
+            }
+        ));
+        jScrollPane6.setViewportView(jTable6);
+
+        jPanel18.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 630, 130));
+
+        jTabbedPane2.addTab("Venta", jPanel18);
+
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel56.setText("Nombre Cliente");
+        jPanel19.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
+
+        jLabel57.setText("ID Factura");
+        jPanel19.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, -1, -1));
+
+        jLabel58.setText("Fecha");
+        jPanel19.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 30, -1, -1));
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane7.setViewportView(jList1);
+
+        jPanel19.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 580, 120));
+        jPanel19.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 230, 30));
+        jPanel19.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 230, 30));
+        jPanel19.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, 60, 30));
+        jPanel19.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 50, 70, 30));
+        jPanel19.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 50, 50, 30));
+
+        jButton17.setText("CANCELAR");
+        jPanel19.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, -1, -1));
+
+        jButton18.setText("ACEPTAR");
+        jPanel19.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, -1, -1));
+
+        jButton19.setText("Buscar");
+        jPanel19.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 150, -1, -1));
+
+        jTabbedPane2.addTab("Devolucion", jPanel19);
+
+        getContentPane().add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 1000, 450));
+
+        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel59.setText("Disponibles");
+        jPanel20.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, -1, -1));
+
+        jButton20.setText("Agregar");
+        jPanel20.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 50, -1, -1));
+
+        jTable7.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "No. Consola", "Hora Inicio", "Hora Fin", "Total"
+            }
+        ));
+        jScrollPane8.setViewportView(jTable7);
+
+        jPanel20.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 715, 192));
+
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane9.setViewportView(jList2);
+
+        jPanel20.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 33, -1, -1));
+        jPanel20.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 110, -1));
+
+        jLabel60.setText("No. Consola");
+        jPanel20.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, -1, -1));
+
+        jLabel61.setText("Tiempo");
+        jPanel20.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, -1, -1));
+        jPanel20.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 100, 20));
+        jPanel20.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 90, 20));
+
+        jLabel62.setText("No. controles");
+        jPanel20.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, -1, -1));
+
+        jTabbedPane3.addTab("Estado Consolas", jPanel20);
+
+        getContentPane().add(jTabbedPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 990, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1171,6 +1387,8 @@ public class principal extends javax.swing.JFrame {
         jPanel2.setVisible(false);
         jTabbedPaneUsuarios.setVisible(true);
         jTabbedPane1.setVisible(false);
+        jTabbedPane2.setVisible(false);
+        jTabbedPane3.setVisible(false);
         jPanelEstadísticas.setVisible(false);
     }//GEN-LAST:event_jLabelUsuariosMouseClicked
 
@@ -1238,6 +1456,36 @@ public class principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldNombreUsuarioActionPerformed
 
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+         jTabbedPane3.setVisible(true);
+         jTabbedPane1.setVisible(false);
+         jTabbedPane2.setVisible(false);
+         jPanelEstadísticas.setVisible(false);
+         jPanel2.setVisible(false);
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        Nuevo_Cliente newcliente = new Nuevo_Cliente();
+        newcliente.setVisible(true);
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        jTabbedPane2.setVisible(true);
+        jTabbedPane1.setVisible(false);
+        jPanelEstadísticas.setVisible(false);
+        jTabbedPane3.setVisible(false);
+        jPanel2.setVisible(false);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1281,7 +1529,16 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -1344,13 +1601,28 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelCompras;
     private javax.swing.JLabel jLabelEstadísticas;
     private javax.swing.JLabel jLabelUsuarios;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1360,7 +1632,10 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -1374,17 +1649,37 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPaneUsuarios;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
+    private javax.swing.JTable jTable6;
+    private javax.swing.JTable jTable7;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextFieldNombreUsuario;
     private javax.swing.JTextField jTextFieldNombreUsuario1;
     private javax.swing.JTextField jTextFieldNombreUsuario2;
