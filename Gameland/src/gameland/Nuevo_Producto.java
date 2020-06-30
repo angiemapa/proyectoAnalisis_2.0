@@ -16,6 +16,7 @@ public class Nuevo_Producto extends javax.swing.JFrame {
      */
     public Nuevo_Producto() {
         initComponents();
+        this.setTitle("AGREGAR NUEVO PRODUCTO");
     }
 
     /**
