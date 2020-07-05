@@ -1,7 +1,11 @@
 
 package gameland;
 
+import java.awt.event.KeyEvent;
+import javax.persistence.EntityManagerFactory;
 import javax.swing.JOptionPane;
+import url.conexionBD.Conexion;
+import url.controlador.ProductoJpaController;
 
 public class principal extends javax.swing.JFrame {
 
@@ -11,6 +15,7 @@ public class principal extends javax.swing.JFrame {
         jPanel8.setVisible(false);
         jPanel9.setVisible(false);
     }
+    EntityManagerFactory emf = Conexion.obtenerConexion();
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -261,7 +266,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel9.setText("Usuarios Activos");
         jInternalFrame1.getContentPane().add(jLabel9);
-        jLabel9.setBounds(180, 90, 120, 15);
+        jLabel9.setBounds(180, 90, 120, 16);
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -277,7 +282,7 @@ public class principal extends javax.swing.JFrame {
         jScrollPane4.setViewportView(jTable4);
 
         jInternalFrame1.getContentPane().add(jScrollPane4);
-        jScrollPane4.setBounds(20, 120, 452, 270);
+        jScrollPane4.setBounds(20, 120, 453, 270);
 
         jButton1.setBackground(new java.awt.Color(0, 183, 183));
         jButton1.setFont(new java.awt.Font("Gill Sans MT", 1, 12)); // NOI18N
@@ -289,7 +294,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel29.setText("Correo Electrónico:");
         jPanel15.add(jLabel29);
-        jLabel29.setBounds(20, 230, 120, 15);
+        jLabel29.setBounds(20, 230, 120, 16);
 
         jTextFieldNombreUsuario.setText("Nombre del Empleado");
         jTextFieldNombreUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -302,7 +307,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel30.setText("Género:");
         jPanel15.add(jLabel30);
-        jLabel30.setBounds(30, 280, 60, 15);
+        jLabel30.setBounds(30, 280, 60, 16);
 
         jTextFieldNombreUsuario1.setText("CorreoElectrónico");
         jTextFieldNombreUsuario1.addActionListener(new java.awt.event.ActionListener() {
@@ -315,11 +320,11 @@ public class principal extends javax.swing.JFrame {
 
         jLabel31.setText("Número deTeléfono:");
         jPanel15.add(jLabel31);
-        jLabel31.setBounds(20, 180, 130, 15);
+        jLabel31.setBounds(20, 180, 130, 16);
 
         jLabel32.setText("UserID");
         jPanel15.add(jLabel32);
-        jLabel32.setBounds(280, 30, 48, 15);
+        jLabel32.setBounds(280, 30, 48, 16);
 
         jTextFieldNombreUsuario2.setText("Teléfono");
         jTextFieldNombreUsuario2.addActionListener(new java.awt.event.ActionListener() {
@@ -332,25 +337,25 @@ public class principal extends javax.swing.JFrame {
 
         BoxSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Género", "Masculino", "Femenino", " " }));
         jPanel15.add(BoxSexo);
-        BoxSexo.setBounds(140, 120, 160, 29);
+        BoxSexo.setBounds(140, 120, 160, 26);
 
         jLabel33.setText("Nombre:");
         jPanel15.add(jLabel33);
-        jLabel33.setBounds(20, 80, 60, 15);
+        jLabel33.setBounds(20, 80, 60, 16);
 
         jComboBoxEstadoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado del Usuario", "Activo", "Desactivo" }));
         jPanel15.add(jComboBoxEstadoUsuario);
-        jComboBoxEstadoUsuario.setBounds(140, 280, 130, 29);
+        jComboBoxEstadoUsuario.setBounds(140, 280, 130, 26);
 
         jLabel34.setText("Género:");
         jPanel15.add(jLabel34);
-        jLabel34.setBounds(20, 120, 60, 15);
+        jLabel34.setBounds(20, 120, 60, 16);
 
         jButton2.setBackground(new java.awt.Color(0, 183, 183));
         jButton2.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
         jButton2.setText("Guardar\n");
         jPanel15.add(jButton2);
-        jButton2.setBounds(140, 330, 72, 25);
+        jButton2.setBounds(140, 330, 71, 34);
 
         jInternalFrame1.getContentPane().add(jPanel15);
         jPanel15.setBounds(610, 10, 370, 380);
@@ -368,7 +373,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel35.setText("Correo Electrónico:");
         jPanel16.add(jLabel35);
-        jLabel35.setBounds(20, 230, 120, 15);
+        jLabel35.setBounds(20, 230, 120, 16);
 
         jTextFieldNombreUsuario3.setText("Nombre del Empleado");
         jTextFieldNombreUsuario3.addActionListener(new java.awt.event.ActionListener() {
@@ -381,7 +386,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel36.setText("Género:");
         jPanel16.add(jLabel36);
-        jLabel36.setBounds(30, 280, 60, 15);
+        jLabel36.setBounds(30, 280, 60, 16);
 
         jTextFieldNombreUsuario4.setText("CorreoElectrónico");
         jTextFieldNombreUsuario4.addActionListener(new java.awt.event.ActionListener() {
@@ -394,11 +399,11 @@ public class principal extends javax.swing.JFrame {
 
         jLabel37.setText("Número deTeléfono:");
         jPanel16.add(jLabel37);
-        jLabel37.setBounds(20, 180, 130, 15);
+        jLabel37.setBounds(20, 180, 130, 16);
 
         jLabel38.setText("UserID");
         jPanel16.add(jLabel38);
-        jLabel38.setBounds(280, 30, 48, 15);
+        jLabel38.setBounds(280, 30, 48, 16);
 
         jTextFieldNombreUsuario5.setText("Teléfono");
         jTextFieldNombreUsuario5.addActionListener(new java.awt.event.ActionListener() {
@@ -411,19 +416,19 @@ public class principal extends javax.swing.JFrame {
 
         BoxSexo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Género", "Masculino", "Femenino", " " }));
         jPanel16.add(BoxSexo1);
-        BoxSexo1.setBounds(140, 120, 160, 29);
+        BoxSexo1.setBounds(140, 120, 160, 26);
 
         jLabel39.setText("Nombre:");
         jPanel16.add(jLabel39);
-        jLabel39.setBounds(20, 80, 60, 15);
+        jLabel39.setBounds(20, 80, 60, 16);
 
         jComboBoxEstadoUsuario1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado del Usuario", "Activo", "Desactivo" }));
         jPanel16.add(jComboBoxEstadoUsuario1);
-        jComboBoxEstadoUsuario1.setBounds(140, 280, 130, 29);
+        jComboBoxEstadoUsuario1.setBounds(140, 280, 130, 26);
 
         jLabel40.setText("Género:");
         jPanel16.add(jLabel40);
-        jLabel40.setBounds(20, 120, 60, 15);
+        jLabel40.setBounds(20, 120, 60, 16);
 
         jInternalFrame2.getContentPane().add(jPanel16);
         jPanel16.setBounds(140, 10, 370, 380);
@@ -432,7 +437,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel41.setText("Confirme Contraseña:");
         jPanel17.add(jLabel41);
-        jLabel41.setBounds(20, 230, 140, 15);
+        jLabel41.setBounds(20, 230, 140, 16);
 
         jTextFieldNombreUsuario6.setText("Nombre del Empleado");
         jTextFieldNombreUsuario6.addActionListener(new java.awt.event.ActionListener() {
@@ -454,7 +459,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel43.setText("Contraseña:");
         jPanel17.add(jLabel43);
-        jLabel43.setBounds(20, 180, 130, 15);
+        jLabel43.setBounds(20, 180, 130, 16);
 
         jTextFieldNombreUsuario8.setText("Contraseña");
         jTextFieldNombreUsuario8.addActionListener(new java.awt.event.ActionListener() {
@@ -467,21 +472,21 @@ public class principal extends javax.swing.JFrame {
 
         BoxSexo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Privilegio", "Administrador", "Vendedor", " ", " " }));
         jPanel17.add(BoxSexo2);
-        BoxSexo2.setBounds(140, 120, 160, 29);
+        BoxSexo2.setBounds(140, 120, 160, 26);
 
         jLabel45.setText("Userame");
         jPanel17.add(jLabel45);
-        jLabel45.setBounds(20, 80, 60, 15);
+        jLabel45.setBounds(20, 80, 60, 16);
 
         jLabel46.setText("Privilegio");
         jPanel17.add(jLabel46);
-        jLabel46.setBounds(20, 120, 60, 15);
+        jLabel46.setBounds(20, 120, 60, 16);
 
         jButton4.setBackground(new java.awt.Color(0, 183, 183));
         jButton4.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
         jButton4.setText("Guardar\n");
         jPanel17.add(jButton4);
-        jButton4.setBounds(240, 300, 90, 25);
+        jButton4.setBounds(240, 300, 90, 34);
 
         jInternalFrame2.getContentPane().add(jPanel17);
         jPanel17.setBounds(550, 20, 370, 360);
@@ -662,6 +667,14 @@ public class principal extends javax.swing.JFrame {
         jPanel12.setMinimumSize(new java.awt.Dimension(900, 95));
 
         jTextField2.setText("BUSCAR PRODUCTO");
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField2KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField2KeyReleased(evt);
+            }
+        });
 
         jTextField3.setText("PROVEEDOR");
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
@@ -762,7 +775,7 @@ public class principal extends javax.swing.JFrame {
                 .addComponent(jButton11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 403, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 393, Short.MAX_VALUE)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -907,7 +920,7 @@ public class principal extends javax.swing.JFrame {
                     .addComponent(jComboBox_Numerofactura, 0, 153, Short.MAX_VALUE))
                 .addGap(81, 81, 81)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(87, 87, 87))
         );
@@ -1032,7 +1045,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel23)
                     .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addContainerGap(248, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1045,7 +1058,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(jLabel18))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
@@ -1679,6 +1692,18 @@ public class principal extends javax.swing.JFrame {
     private void jTextField16KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField16KeyReleased
         enable2();
     }//GEN-LAST:event_jTextField16KeyReleased
+
+    private void jTextField2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyPressed
+
+    }//GEN-LAST:event_jTextField2KeyPressed
+
+    private void jTextField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyReleased
+        // TODO add your handling code here:
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            ProductoJpaController control = new ProductoJpaController(emf);
+            
+        }
+    }//GEN-LAST:event_jTextField2KeyReleased
 
     /**
      * @param args the command line arguments

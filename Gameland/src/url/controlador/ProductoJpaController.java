@@ -253,5 +253,20 @@ public class ProductoJpaController implements Serializable {
             em.close();
         }
     }
+    public void Actualizar(Producto producto){
+        EntityManager em = getEntityManager();
+        try {
+            em.getTransaction().begin();
+            Query updateProducto = em.createNativeQuery("UPDATE producto SET cantidad =  cantidad + ? WHERE codigo = ?");
+            updateProducto.setParameter(1, producto.getCantidad());
+            updateProducto.setParameter(2, producto.getCodigo());
+            updateProducto.executeUpdate();
+            em.getTransaction().commit();
+        } finally {
+            if (em != null) {
+
+            }
+        }
     
+    }
 }
