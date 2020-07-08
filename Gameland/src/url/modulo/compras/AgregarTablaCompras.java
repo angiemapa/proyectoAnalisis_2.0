@@ -5,19 +5,48 @@
  */
 package url.modulo.compras;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.EntityManagerFactory;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import url.conexionBD.Conexion;
+import url.controlador.DetalleCompraJpaController;
+import url.controlador.ProveedorJpaController;
+import url.controladorBD.Proveedor;
+import url.controladorBD.DetalleCompra;
 
 /**
  *
  * @author USUARIO
  */
 public class AgregarTablaCompras implements AgregarCompra{
+    EntityManagerFactory emf = Conexion.obtenerConexion();
+    ProveedorJpaController control = new ProveedorJpaController(emf);
+    DetalleCompraJpaController controldetalle = new DetalleCompraJpaController(emf);
+    
 
     @Override
-    public DefaultTableModel obtenerModelo(TableModel modeloProducto, DefaultTableModel modeloDetalle, int seleccion, int cantidad) {
-        
-        return null;
+    public void GuardarCompra(TableModel modeloCompra) {
+        for (int i = 0; i < modeloCompra.getRowCount(); i++) {
+            DetalleCompra detalle = new DetalleCompra();
+            
+        }
     }
-    
+
+    @Override
+    public Proveedor obtenerproveedor(String nombre) {
+        List<Proveedor> lisproveedor = new ArrayList<>();
+        Proveedor proveedor = null;
+        lisproveedor = control.findProveedorEntities();
+        for (int i = 0; i < lisproveedor.size(); i++) {
+            if(lisproveedor.get(i).getNombre().equals(nombre)){
+                proveedor = (Proveedor)control.findProveedor(lisproveedor.get(i).getId());
+                return proveedor;
+            }
+        }
+        return  null;
+    }
+
+   
 }

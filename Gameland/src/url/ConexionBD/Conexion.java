@@ -1,9 +1,13 @@
 
 package url.conexionBD;
 
+import java.util.Map;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.spi.PersistenceProvider;
+import javax.persistence.spi.PersistenceUnitInfo;
+import javax.persistence.spi.ProviderUtil;
 
 /**
  *
@@ -19,11 +23,8 @@ public class Conexion {
     public static EntityManagerFactory obtenerConexion(){
     
         if(Conexion.em==null){
-            Conexion.emf=Persistence.createEntityManagerFactory("gameland");
+            Conexion.emf= Persistence.createEntityManagerFactory("game", null);
         }
         return emf;
     }
-    
-    
-    
 }

@@ -1,11 +1,19 @@
 
 package gameland;
 
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 import java.awt.event.KeyEvent;
+import java.util.Date;
 import javax.persistence.EntityManagerFactory;
 import javax.swing.JOptionPane;
 import url.conexionBD.Conexion;
+import url.controlador.ComprasJpaController;
 import url.controlador.ProductoJpaController;
+import url.controladorBD.Compras;
+import url.controladorBD.Proveedor;
+import url.controladorBD.Login;
 
 public class principal extends javax.swing.JFrame {
 
@@ -16,6 +24,12 @@ public class principal extends javax.swing.JFrame {
         jPanel9.setVisible(false);
     }
     EntityManagerFactory emf = Conexion.obtenerConexion();
+    Date date = new Date();
+    java.sql.Date sqlStartDate = new java.sql.Date(date.getTime());
+    Proveedor proveedor = new Proveedor();
+    Login lg = new Login();
+    ComprasJpaController controlCompras = new ComprasJpaController(emf);
+    int idcompras=0;
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -266,7 +280,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel9.setText("Usuarios Activos");
         jInternalFrame1.getContentPane().add(jLabel9);
-        jLabel9.setBounds(180, 90, 120, 16);
+        jLabel9.setBounds(180, 90, 120, 14);
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -282,7 +296,7 @@ public class principal extends javax.swing.JFrame {
         jScrollPane4.setViewportView(jTable4);
 
         jInternalFrame1.getContentPane().add(jScrollPane4);
-        jScrollPane4.setBounds(20, 120, 453, 270);
+        jScrollPane4.setBounds(20, 120, 454, 270);
 
         jButton1.setBackground(new java.awt.Color(0, 183, 183));
         jButton1.setFont(new java.awt.Font("Gill Sans MT", 1, 12)); // NOI18N
@@ -294,7 +308,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel29.setText("Correo Electrónico:");
         jPanel15.add(jLabel29);
-        jLabel29.setBounds(20, 230, 120, 16);
+        jLabel29.setBounds(20, 230, 120, 14);
 
         jTextFieldNombreUsuario.setText("Nombre del Empleado");
         jTextFieldNombreUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -307,7 +321,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel30.setText("Género:");
         jPanel15.add(jLabel30);
-        jLabel30.setBounds(30, 280, 60, 16);
+        jLabel30.setBounds(30, 280, 60, 14);
 
         jTextFieldNombreUsuario1.setText("CorreoElectrónico");
         jTextFieldNombreUsuario1.addActionListener(new java.awt.event.ActionListener() {
@@ -320,11 +334,11 @@ public class principal extends javax.swing.JFrame {
 
         jLabel31.setText("Número deTeléfono:");
         jPanel15.add(jLabel31);
-        jLabel31.setBounds(20, 180, 130, 16);
+        jLabel31.setBounds(20, 180, 130, 14);
 
         jLabel32.setText("UserID");
         jPanel15.add(jLabel32);
-        jLabel32.setBounds(280, 30, 48, 16);
+        jLabel32.setBounds(280, 30, 48, 14);
 
         jTextFieldNombreUsuario2.setText("Teléfono");
         jTextFieldNombreUsuario2.addActionListener(new java.awt.event.ActionListener() {
@@ -337,25 +351,25 @@ public class principal extends javax.swing.JFrame {
 
         BoxSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Género", "Masculino", "Femenino", " " }));
         jPanel15.add(BoxSexo);
-        BoxSexo.setBounds(140, 120, 160, 26);
+        BoxSexo.setBounds(140, 120, 160, 22);
 
         jLabel33.setText("Nombre:");
         jPanel15.add(jLabel33);
-        jLabel33.setBounds(20, 80, 60, 16);
+        jLabel33.setBounds(20, 80, 60, 14);
 
         jComboBoxEstadoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado del Usuario", "Activo", "Desactivo" }));
         jPanel15.add(jComboBoxEstadoUsuario);
-        jComboBoxEstadoUsuario.setBounds(140, 280, 130, 26);
+        jComboBoxEstadoUsuario.setBounds(140, 280, 130, 22);
 
         jLabel34.setText("Género:");
         jPanel15.add(jLabel34);
-        jLabel34.setBounds(20, 120, 60, 16);
+        jLabel34.setBounds(20, 120, 60, 14);
 
         jButton2.setBackground(new java.awt.Color(0, 183, 183));
         jButton2.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
         jButton2.setText("Guardar\n");
         jPanel15.add(jButton2);
-        jButton2.setBounds(140, 330, 71, 34);
+        jButton2.setBounds(140, 330, 75, 27);
 
         jInternalFrame1.getContentPane().add(jPanel15);
         jPanel15.setBounds(610, 10, 370, 380);
@@ -373,7 +387,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel35.setText("Correo Electrónico:");
         jPanel16.add(jLabel35);
-        jLabel35.setBounds(20, 230, 120, 16);
+        jLabel35.setBounds(20, 230, 120, 14);
 
         jTextFieldNombreUsuario3.setText("Nombre del Empleado");
         jTextFieldNombreUsuario3.addActionListener(new java.awt.event.ActionListener() {
@@ -386,7 +400,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel36.setText("Género:");
         jPanel16.add(jLabel36);
-        jLabel36.setBounds(30, 280, 60, 16);
+        jLabel36.setBounds(30, 280, 60, 14);
 
         jTextFieldNombreUsuario4.setText("CorreoElectrónico");
         jTextFieldNombreUsuario4.addActionListener(new java.awt.event.ActionListener() {
@@ -399,11 +413,11 @@ public class principal extends javax.swing.JFrame {
 
         jLabel37.setText("Número deTeléfono:");
         jPanel16.add(jLabel37);
-        jLabel37.setBounds(20, 180, 130, 16);
+        jLabel37.setBounds(20, 180, 130, 14);
 
         jLabel38.setText("UserID");
         jPanel16.add(jLabel38);
-        jLabel38.setBounds(280, 30, 48, 16);
+        jLabel38.setBounds(280, 30, 48, 14);
 
         jTextFieldNombreUsuario5.setText("Teléfono");
         jTextFieldNombreUsuario5.addActionListener(new java.awt.event.ActionListener() {
@@ -416,19 +430,19 @@ public class principal extends javax.swing.JFrame {
 
         BoxSexo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Género", "Masculino", "Femenino", " " }));
         jPanel16.add(BoxSexo1);
-        BoxSexo1.setBounds(140, 120, 160, 26);
+        BoxSexo1.setBounds(140, 120, 160, 22);
 
         jLabel39.setText("Nombre:");
         jPanel16.add(jLabel39);
-        jLabel39.setBounds(20, 80, 60, 16);
+        jLabel39.setBounds(20, 80, 60, 14);
 
         jComboBoxEstadoUsuario1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado del Usuario", "Activo", "Desactivo" }));
         jPanel16.add(jComboBoxEstadoUsuario1);
-        jComboBoxEstadoUsuario1.setBounds(140, 280, 130, 26);
+        jComboBoxEstadoUsuario1.setBounds(140, 280, 130, 22);
 
         jLabel40.setText("Género:");
         jPanel16.add(jLabel40);
-        jLabel40.setBounds(20, 120, 60, 16);
+        jLabel40.setBounds(20, 120, 60, 14);
 
         jInternalFrame2.getContentPane().add(jPanel16);
         jPanel16.setBounds(140, 10, 370, 380);
@@ -437,7 +451,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel41.setText("Confirme Contraseña:");
         jPanel17.add(jLabel41);
-        jLabel41.setBounds(20, 230, 140, 16);
+        jLabel41.setBounds(20, 230, 140, 14);
 
         jTextFieldNombreUsuario6.setText("Nombre del Empleado");
         jTextFieldNombreUsuario6.addActionListener(new java.awt.event.ActionListener() {
@@ -459,7 +473,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel43.setText("Contraseña:");
         jPanel17.add(jLabel43);
-        jLabel43.setBounds(20, 180, 130, 16);
+        jLabel43.setBounds(20, 180, 130, 14);
 
         jTextFieldNombreUsuario8.setText("Contraseña");
         jTextFieldNombreUsuario8.addActionListener(new java.awt.event.ActionListener() {
@@ -472,21 +486,21 @@ public class principal extends javax.swing.JFrame {
 
         BoxSexo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Privilegio", "Administrador", "Vendedor", " ", " " }));
         jPanel17.add(BoxSexo2);
-        BoxSexo2.setBounds(140, 120, 160, 26);
+        BoxSexo2.setBounds(140, 120, 160, 22);
 
         jLabel45.setText("Userame");
         jPanel17.add(jLabel45);
-        jLabel45.setBounds(20, 80, 60, 16);
+        jLabel45.setBounds(20, 80, 60, 14);
 
         jLabel46.setText("Privilegio");
         jPanel17.add(jLabel46);
-        jLabel46.setBounds(20, 120, 60, 16);
+        jLabel46.setBounds(20, 120, 60, 14);
 
         jButton4.setBackground(new java.awt.Color(0, 183, 183));
         jButton4.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
         jButton4.setText("Guardar\n");
         jPanel17.add(jButton4);
-        jButton4.setBounds(240, 300, 90, 34);
+        jButton4.setBounds(240, 300, 90, 27);
 
         jInternalFrame2.getContentPane().add(jPanel17);
         jPanel17.setBounds(550, 20, 370, 360);
@@ -688,6 +702,11 @@ public class principal extends javax.swing.JFrame {
         jTextField4.setText("INGRESE # FACTURA");
 
         jButton9.setText("CONFIRMAR");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton10.setText("CANCELAR");
 
@@ -775,7 +794,7 @@ public class principal extends javax.swing.JFrame {
                 .addComponent(jButton11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 393, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 402, Short.MAX_VALUE)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -920,7 +939,7 @@ public class principal extends javax.swing.JFrame {
                     .addComponent(jComboBox_Numerofactura, 0, 153, Short.MAX_VALUE))
                 .addGap(81, 81, 81)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(87, 87, 87))
         );
@@ -1045,7 +1064,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel23)
                     .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addContainerGap(262, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1058,7 +1077,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(jLabel18))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
@@ -1357,7 +1376,10 @@ public class principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    private void obtener_id_siguienteCompra(){
+        idcompras = controlCompras.getComprasCount()+1;
+        lg.setId(4);
+    }
     private void jLabel2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseMoved
         // TODO add your handling code here:
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0,183,183)));
@@ -1704,6 +1726,14 @@ public class principal extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_jTextField2KeyReleased
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        Compras compras = new Compras();
+        compras.setNfactura(jTextField4.getText());
+        compras.setFecha(sqlStartDate);
+        compras.setProveedorid(proveedor);
+        compras.setLoginid(lg);
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -26,7 +26,7 @@ public class ActualizarExistenciaProducto {
     
     public void actualizarExistencia(Producto producto){
         try {
-            control.Actualizar(producto);
+            //control.Actualizar(producto);
         } catch (Exception ex) {
             Logger.getLogger(ActualizarExistenciaProducto.class.getName()).log(Level.SEVERE, null, ex);
         }

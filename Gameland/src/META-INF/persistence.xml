@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-  <persistence-unit name="GamelandPU" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="game" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>url.controladorBD.Login</class>
-    <class>url.controladorBD.Venta</class>
-    <class>url.controladorBD.Proveedor</class>
     <class>url.controladorBD.DetalleCompra</class>
-    <class>url.controladorBD.VideoJuegos</class>
-    <class>url.controladorBD.Alquiler</class>
-    <class>url.controladorBD.Producto</class>
-    <class>url.controladorBD.Compras</class>
-    <class>url.controladorBD.Usuario</class>
-    <class>url.controladorBD.DetalleAlquier</class>
-    <class>url.controladorBD.DetalleVenta</class>
     <class>url.controladorBD.Cliente</class>
+    <class>url.controladorBD.Compras</class>
+    <class>url.controladorBD.Proveedor</class>
+    <class>url.controladorBD.DetalleVenta</class>
+    <class>url.controladorBD.Venta</class>
+    <class>url.controladorBD.Producto</class>
+    <class>url.controladorBD.Usuario</class>
+    <class>url.controldor.Compras</class>
+    <class>url.controldor.Proveedor</class>
+    <class>url.controldor.Cliente</class>
+    <class>url.controldor.DetalleVenta</class>
+    <class>url.controldor.Login</class>
+    <class>url.controldor.Venta</class>
+    <class>url.controldor.Usuario</class>
+    <class>url.controldor.Producto</class>
+    <class>url.controldor.DetalleCompra</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sala_videojuegos?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

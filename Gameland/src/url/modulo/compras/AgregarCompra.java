@@ -3,7 +3,9 @@ package url.modulo.compras;
 
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import url.controladorBD.Proveedor;
 
 public interface AgregarCompra {
-    public DefaultTableModel obtenerModelo(TableModel modeloProducto,DefaultTableModel modeloDetalle,int seleccion,int cantidad);
+    public void GuardarCompra(TableModel modeloCompra);
+    public Proveedor obtenerproveedor(String nombre);
 }

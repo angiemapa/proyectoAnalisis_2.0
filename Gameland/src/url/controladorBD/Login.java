@@ -20,6 +20,8 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -27,6 +29,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "login")
+@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Login.findAll", query = "SELECT l FROM Login l"),
     @NamedQuery(name = "Login.findById", query = "SELECT l FROM Login l WHERE l.id = :id"),
@@ -104,6 +107,7 @@ public class Login implements Serializable {
         this.administrador = administrador;
     }
 
+    @XmlTransient
     public List<Compras> getComprasList() {
         return comprasList;
     }
@@ -112,6 +116,7 @@ public class Login implements Serializable {
         this.comprasList = comprasList;
     }
 
+    @XmlTransient
     public List<Venta> getVentaList() {
         return ventaList;
     }
