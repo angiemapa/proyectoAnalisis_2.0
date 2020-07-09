@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package url.controladorBD;
-
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
