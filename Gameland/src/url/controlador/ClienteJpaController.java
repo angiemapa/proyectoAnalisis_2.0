@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package url.controlador;
 
 import java.io.Serializable;
@@ -15,20 +11,20 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import url.controlador.exceptions.IllegalOrphanException;
 import url.controlador.exceptions.NonexistentEntityException;
 import url.controladorBD.Cliente;
 
-/**
- *
- * @author USUARIO
- */
 public class ClienteJpaController implements Serializable {
 
     public ClienteJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    private EntityManagerFactory emf = null;
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("game");
+
+    public ClienteJpaController() {
+    }
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
