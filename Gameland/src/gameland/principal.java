@@ -40,59 +40,63 @@ public class principal extends javax.swing.JFrame {
         jPanelEstadísticas = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBoxTipoEstadística = new javax.swing.JComboBox<>();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable5 = new javax.swing.JTable();
-        jButton5 = new javax.swing.JButton();
+        BotonVer = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
+        jComboBoxMes = new javax.swing.JComboBox<>();
         jLabel49 = new javax.swing.JLabel();
-        jComboBox7 = new javax.swing.JComboBox<>();
+        jComboBoxAnio = new javax.swing.JComboBox<>();
+        BotonGuardarEstadistica = new javax.swing.JButton();
         jTabbedPaneUsuarios = new javax.swing.JTabbedPane();
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jPanel15 = new javax.swing.JPanel();
+        TablaUsuarios = new javax.swing.JTable();
+        BotonModificar = new javax.swing.JButton();
+        PanelModificar = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
         jTextFieldNombreUsuario = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
-        jTextFieldNombreUsuario1 = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        jTextFieldNombreUsuario2 = new javax.swing.JTextField();
-        BoxSexo = new javax.swing.JComboBox<>();
+        jTextFieldContraseñaconfirm = new javax.swing.JTextField();
         jLabel33 = new javax.swing.JLabel();
         jComboBoxEstadoUsuario = new javax.swing.JComboBox<>();
+        BotonCancelar = new javax.swing.JButton();
+        BotonGuardar = new javax.swing.JButton();
+        jTextFieldCorreo = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jTextFieldTelefono = new javax.swing.JTextField();
+        jTextFieldContraseña = new javax.swing.JTextField();
         jInternalFrame2 = new javax.swing.JInternalFrame();
         jLabel8 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
-        jTextFieldNombreUsuario3 = new javax.swing.JTextField();
+        jTextFieldNombreUsuarioNuevo = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
-        jTextFieldNombreUsuario4 = new javax.swing.JTextField();
+        jTextFieldCorreoNuevo = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jTextFieldNombreUsuario5 = new javax.swing.JTextField();
-        BoxSexo1 = new javax.swing.JComboBox<>();
+        jTextFieldTelefonoNuevo = new javax.swing.JTextField();
+        BoxSexoNuevo = new javax.swing.JComboBox<>();
         jLabel39 = new javax.swing.JLabel();
-        jComboBoxEstadoUsuario1 = new javax.swing.JComboBox<>();
+        jComboBoxEstadoUsuarioNuevo = new javax.swing.JComboBox<>();
         jLabel40 = new javax.swing.JLabel();
         jPanel17 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
-        jTextFieldNombreUsuario6 = new javax.swing.JTextField();
-        jTextFieldNombreUsuario7 = new javax.swing.JTextField();
+        jTextFieldUsernameNuevo = new javax.swing.JTextField();
+        jTextFieldContraseñaNuevaConfirmar = new javax.swing.JTextField();
         jLabel43 = new javax.swing.JLabel();
-        jTextFieldNombreUsuario8 = new javax.swing.JTextField();
-        BoxSexo2 = new javax.swing.JComboBox<>();
+        jTextFieldContraseñaNueva = new javax.swing.JTextField();
+        BoxPrivilegioNuevo = new javax.swing.JComboBox<>();
         jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        BotonCancelarNuevoUsuario = new javax.swing.JButton();
+        BotonGuardarNuevoUsuario = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -228,31 +232,36 @@ public class principal extends javax.swing.JFrame {
         jLabel44.setText("ESTADÍSTICAS");
         jPanelEstadísticas.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 220, 40));
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Compra", "Ventas", "Renta de Videojuegos", " " }));
-        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxTipoEstadística.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Compra", "Ventas", "Renta de Videojuegos", " " }));
+        jComboBoxTipoEstadística.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox5ActionPerformed(evt);
+                jComboBoxTipoEstadísticaActionPerformed(evt);
             }
         });
-        jPanelEstadísticas.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, -1, -1));
+        jPanelEstadísticas.add(jComboBoxTipoEstadística, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, -1, -1));
 
         jTable5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID compra", "Fecha", "Proveedor", "Subtotal", "Total", "Usuario"
+                "ID compra", "Fecha", "Proveedor", "Total", "Usuario"
             }
         ));
         jScrollPane5.setViewportView(jTable5);
 
         jPanelEstadísticas.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 810, 300));
 
-        jButton5.setText("Guardar en PC");
-        jPanelEstadísticas.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 390, -1, -1));
+        BotonVer.setText("Ver");
+        BotonVer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonVerActionPerformed(evt);
+            }
+        });
+        jPanelEstadísticas.add(BotonVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 80, 80, -1));
 
         jLabel47.setText("Tipo");
         jPanelEstadísticas.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
@@ -260,14 +269,22 @@ public class principal extends javax.swing.JFrame {
         jLabel48.setText("Mes");
         jPanelEstadísticas.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, -1, -1));
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Nombiembre", "Diciembre" }));
-        jPanelEstadísticas.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, -1, -1));
+        jComboBoxMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Nombiembre", "Diciembre" }));
+        jPanelEstadísticas.add(jComboBoxMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, -1, -1));
 
         jLabel49.setText("año");
         jPanelEstadísticas.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, -1, -1));
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2020", "2021" }));
-        jPanelEstadísticas.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, -1, -1));
+        jComboBoxAnio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2020", "2021" }));
+        jPanelEstadísticas.add(jComboBoxAnio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, -1, -1));
+
+        BotonGuardarEstadistica.setText("Guardar en PC");
+        BotonGuardarEstadistica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonGuardarEstadisticaActionPerformed(evt);
+            }
+        });
+        jPanelEstadísticas.add(BotonGuardarEstadistica, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 390, -1, -1));
 
         getContentPane().add(jPanelEstadísticas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 1000, 460));
 
@@ -280,9 +297,9 @@ public class principal extends javax.swing.JFrame {
 
         jLabel9.setText("Usuarios Activos");
         jInternalFrame1.getContentPane().add(jLabel9);
-        jLabel9.setBounds(180, 90, 120, 14);
+        jLabel9.setBounds(180, 90, 120, 16);
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        TablaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -293,22 +310,27 @@ public class principal extends javax.swing.JFrame {
                 "id", "Nombre", "Número de Teléfono"
             }
         ));
-        jScrollPane4.setViewportView(jTable4);
+        jScrollPane4.setViewportView(TablaUsuarios);
 
         jInternalFrame1.getContentPane().add(jScrollPane4);
-        jScrollPane4.setBounds(20, 120, 454, 270);
+        jScrollPane4.setBounds(20, 120, 453, 270);
 
-        jButton1.setBackground(new java.awt.Color(0, 183, 183));
-        jButton1.setFont(new java.awt.Font("Gill Sans MT", 1, 12)); // NOI18N
-        jButton1.setText("Modificar");
-        jInternalFrame1.getContentPane().add(jButton1);
-        jButton1.setBounds(490, 350, 90, 32);
+        BotonModificar.setBackground(new java.awt.Color(0, 183, 183));
+        BotonModificar.setFont(new java.awt.Font("Gill Sans MT", 1, 12)); // NOI18N
+        BotonModificar.setText("Modificar");
+        BotonModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonModificarActionPerformed(evt);
+            }
+        });
+        jInternalFrame1.getContentPane().add(BotonModificar);
+        BotonModificar.setBounds(490, 350, 90, 32);
 
-        jPanel15.setLayout(null);
+        PanelModificar.setLayout(null);
 
         jLabel29.setText("Correo Electrónico:");
-        jPanel15.add(jLabel29);
-        jLabel29.setBounds(20, 230, 120, 14);
+        PanelModificar.add(jLabel29);
+        jLabel29.setBounds(20, 180, 120, 16);
 
         jTextFieldNombreUsuario.setText("Nombre del Empleado");
         jTextFieldNombreUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -316,63 +338,93 @@ public class principal extends javax.swing.JFrame {
                 jTextFieldNombreUsuarioActionPerformed(evt);
             }
         });
-        jPanel15.add(jTextFieldNombreUsuario);
+        PanelModificar.add(jTextFieldNombreUsuario);
         jTextFieldNombreUsuario.setBounds(90, 70, 250, 30);
 
-        jLabel30.setText("Género:");
-        jPanel15.add(jLabel30);
-        jLabel30.setBounds(30, 280, 60, 14);
+        jLabel30.setText("Estado:");
+        PanelModificar.add(jLabel30);
+        jLabel30.setBounds(80, 220, 60, 16);
 
-        jTextFieldNombreUsuario1.setText("CorreoElectrónico");
-        jTextFieldNombreUsuario1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreUsuario1ActionPerformed(evt);
-            }
-        });
-        jPanel15.add(jTextFieldNombreUsuario1);
-        jTextFieldNombreUsuario1.setBounds(140, 220, 200, 30);
-
-        jLabel31.setText("Número deTeléfono:");
-        jPanel15.add(jLabel31);
-        jLabel31.setBounds(20, 180, 130, 14);
+        jLabel31.setText("Contraseña:");
+        PanelModificar.add(jLabel31);
+        jLabel31.setBounds(50, 260, 130, 16);
 
         jLabel32.setText("UserID");
-        jPanel15.add(jLabel32);
-        jLabel32.setBounds(280, 30, 48, 14);
+        PanelModificar.add(jLabel32);
+        jLabel32.setBounds(280, 30, 48, 16);
 
-        jTextFieldNombreUsuario2.setText("Teléfono");
-        jTextFieldNombreUsuario2.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldContraseñaconfirm.setText("Teléfono");
+        jTextFieldContraseñaconfirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreUsuario2ActionPerformed(evt);
+                jTextFieldContraseñaconfirmActionPerformed(evt);
             }
         });
-        jPanel15.add(jTextFieldNombreUsuario2);
-        jTextFieldNombreUsuario2.setBounds(140, 170, 200, 30);
-
-        BoxSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Género", "Masculino", "Femenino", " " }));
-        jPanel15.add(BoxSexo);
-        BoxSexo.setBounds(140, 120, 160, 22);
+        PanelModificar.add(jTextFieldContraseñaconfirm);
+        jTextFieldContraseñaconfirm.setBounds(140, 290, 200, 30);
 
         jLabel33.setText("Nombre:");
-        jPanel15.add(jLabel33);
-        jLabel33.setBounds(20, 80, 60, 14);
+        PanelModificar.add(jLabel33);
+        jLabel33.setBounds(20, 80, 60, 16);
 
         jComboBoxEstadoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado del Usuario", "Activo", "Desactivo" }));
-        jPanel15.add(jComboBoxEstadoUsuario);
-        jComboBoxEstadoUsuario.setBounds(140, 280, 130, 22);
+        PanelModificar.add(jComboBoxEstadoUsuario);
+        jComboBoxEstadoUsuario.setBounds(140, 210, 150, 26);
 
-        jLabel34.setText("Género:");
-        jPanel15.add(jLabel34);
-        jLabel34.setBounds(20, 120, 60, 14);
+        BotonCancelar.setBackground(new java.awt.Color(255, 51, 51));
+        BotonCancelar.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
+        BotonCancelar.setText("Cancelar");
+        BotonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonCancelarActionPerformed(evt);
+            }
+        });
+        PanelModificar.add(BotonCancelar);
+        BotonCancelar.setBounds(260, 330, 72, 34);
 
-        jButton2.setBackground(new java.awt.Color(0, 183, 183));
-        jButton2.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
-        jButton2.setText("Guardar\n");
-        jPanel15.add(jButton2);
-        jButton2.setBounds(140, 330, 75, 27);
+        BotonGuardar.setBackground(new java.awt.Color(0, 183, 183));
+        BotonGuardar.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
+        BotonGuardar.setText("Guardar\n");
+        BotonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonGuardarActionPerformed(evt);
+            }
+        });
+        PanelModificar.add(BotonGuardar);
+        BotonGuardar.setBounds(160, 330, 71, 34);
 
-        jInternalFrame1.getContentPane().add(jPanel15);
-        jPanel15.setBounds(610, 10, 370, 380);
+        jTextFieldCorreo.setText("CorreoElectrónico");
+        jTextFieldCorreo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCorreoActionPerformed(evt);
+            }
+        });
+        PanelModificar.add(jTextFieldCorreo);
+        jTextFieldCorreo.setBounds(140, 170, 200, 30);
+
+        jLabel34.setText("Número deTeléfono:");
+        PanelModificar.add(jLabel34);
+        jLabel34.setBounds(20, 130, 130, 16);
+
+        jTextFieldTelefono.setText("Teléfono");
+        jTextFieldTelefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldTelefonoActionPerformed(evt);
+            }
+        });
+        PanelModificar.add(jTextFieldTelefono);
+        jTextFieldTelefono.setBounds(140, 120, 200, 30);
+
+        jTextFieldContraseña.setText("Contraseña");
+        jTextFieldContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldContraseñaActionPerformed(evt);
+            }
+        });
+        PanelModificar.add(jTextFieldContraseña);
+        jTextFieldContraseña.setBounds(140, 250, 200, 30);
+
+        jInternalFrame1.getContentPane().add(PanelModificar);
+        PanelModificar.setBounds(610, 10, 370, 380);
 
         jTabbedPaneUsuarios.addTab("Ver Usuarios", jInternalFrame1);
 
@@ -387,62 +439,62 @@ public class principal extends javax.swing.JFrame {
 
         jLabel35.setText("Correo Electrónico:");
         jPanel16.add(jLabel35);
-        jLabel35.setBounds(20, 230, 120, 14);
+        jLabel35.setBounds(20, 230, 120, 16);
 
-        jTextFieldNombreUsuario3.setText("Nombre del Empleado");
-        jTextFieldNombreUsuario3.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldNombreUsuarioNuevo.setText("Nombre del Empleado");
+        jTextFieldNombreUsuarioNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreUsuario3ActionPerformed(evt);
+                jTextFieldNombreUsuarioNuevoActionPerformed(evt);
             }
         });
-        jPanel16.add(jTextFieldNombreUsuario3);
-        jTextFieldNombreUsuario3.setBounds(90, 70, 250, 30);
+        jPanel16.add(jTextFieldNombreUsuarioNuevo);
+        jTextFieldNombreUsuarioNuevo.setBounds(90, 70, 250, 30);
 
-        jLabel36.setText("Género:");
+        jLabel36.setText("Estado:");
         jPanel16.add(jLabel36);
-        jLabel36.setBounds(30, 280, 60, 14);
+        jLabel36.setBounds(30, 280, 60, 16);
 
-        jTextFieldNombreUsuario4.setText("CorreoElectrónico");
-        jTextFieldNombreUsuario4.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldCorreoNuevo.setText("CorreoElectrónico");
+        jTextFieldCorreoNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreUsuario4ActionPerformed(evt);
+                jTextFieldCorreoNuevoActionPerformed(evt);
             }
         });
-        jPanel16.add(jTextFieldNombreUsuario4);
-        jTextFieldNombreUsuario4.setBounds(140, 220, 200, 30);
+        jPanel16.add(jTextFieldCorreoNuevo);
+        jTextFieldCorreoNuevo.setBounds(140, 220, 200, 30);
 
         jLabel37.setText("Número deTeléfono:");
         jPanel16.add(jLabel37);
-        jLabel37.setBounds(20, 180, 130, 14);
+        jLabel37.setBounds(20, 180, 130, 16);
 
         jLabel38.setText("UserID");
         jPanel16.add(jLabel38);
-        jLabel38.setBounds(280, 30, 48, 14);
+        jLabel38.setBounds(280, 30, 48, 16);
 
-        jTextFieldNombreUsuario5.setText("Teléfono");
-        jTextFieldNombreUsuario5.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldTelefonoNuevo.setText("Teléfono");
+        jTextFieldTelefonoNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreUsuario5ActionPerformed(evt);
+                jTextFieldTelefonoNuevoActionPerformed(evt);
             }
         });
-        jPanel16.add(jTextFieldNombreUsuario5);
-        jTextFieldNombreUsuario5.setBounds(140, 170, 200, 30);
+        jPanel16.add(jTextFieldTelefonoNuevo);
+        jTextFieldTelefonoNuevo.setBounds(140, 170, 200, 30);
 
-        BoxSexo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Género", "Masculino", "Femenino", " " }));
-        jPanel16.add(BoxSexo1);
-        BoxSexo1.setBounds(140, 120, 160, 22);
+        BoxSexoNuevo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Género", "Masculino", "Femenino", " " }));
+        jPanel16.add(BoxSexoNuevo);
+        BoxSexoNuevo.setBounds(140, 120, 160, 26);
 
         jLabel39.setText("Nombre:");
         jPanel16.add(jLabel39);
-        jLabel39.setBounds(20, 80, 60, 14);
+        jLabel39.setBounds(20, 80, 60, 16);
 
-        jComboBoxEstadoUsuario1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado del Usuario", "Activo", "Desactivo" }));
-        jPanel16.add(jComboBoxEstadoUsuario1);
-        jComboBoxEstadoUsuario1.setBounds(140, 280, 130, 22);
+        jComboBoxEstadoUsuarioNuevo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado del Usuario", "Activo", "Desactivo" }));
+        jPanel16.add(jComboBoxEstadoUsuarioNuevo);
+        jComboBoxEstadoUsuarioNuevo.setBounds(140, 280, 160, 26);
 
         jLabel40.setText("Género:");
         jPanel16.add(jLabel40);
-        jLabel40.setBounds(20, 120, 60, 14);
+        jLabel40.setBounds(20, 120, 60, 16);
 
         jInternalFrame2.getContentPane().add(jPanel16);
         jPanel16.setBounds(140, 10, 370, 380);
@@ -451,56 +503,73 @@ public class principal extends javax.swing.JFrame {
 
         jLabel41.setText("Confirme Contraseña:");
         jPanel17.add(jLabel41);
-        jLabel41.setBounds(20, 230, 140, 14);
+        jLabel41.setBounds(20, 230, 140, 16);
 
-        jTextFieldNombreUsuario6.setText("Nombre del Empleado");
-        jTextFieldNombreUsuario6.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldUsernameNuevo.setText("Username");
+        jTextFieldUsernameNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreUsuario6ActionPerformed(evt);
+                jTextFieldUsernameNuevoActionPerformed(evt);
             }
         });
-        jPanel17.add(jTextFieldNombreUsuario6);
-        jTextFieldNombreUsuario6.setBounds(90, 70, 250, 30);
+        jPanel17.add(jTextFieldUsernameNuevo);
+        jTextFieldUsernameNuevo.setBounds(100, 70, 250, 30);
 
-        jTextFieldNombreUsuario7.setText("Contraseña");
-        jTextFieldNombreUsuario7.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldContraseñaNuevaConfirmar.setText("Contraseña");
+        jTextFieldContraseñaNuevaConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreUsuario7ActionPerformed(evt);
+                jTextFieldContraseñaNuevaConfirmarActionPerformed(evt);
             }
         });
-        jPanel17.add(jTextFieldNombreUsuario7);
-        jTextFieldNombreUsuario7.setBounds(150, 220, 190, 30);
+        jPanel17.add(jTextFieldContraseñaNuevaConfirmar);
+        jTextFieldContraseñaNuevaConfirmar.setBounds(150, 220, 190, 30);
 
         jLabel43.setText("Contraseña:");
         jPanel17.add(jLabel43);
-        jLabel43.setBounds(20, 180, 130, 14);
+        jLabel43.setBounds(20, 180, 130, 16);
 
-        jTextFieldNombreUsuario8.setText("Contraseña");
-        jTextFieldNombreUsuario8.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldContraseñaNueva.setText("Contraseña");
+        jTextFieldContraseñaNueva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreUsuario8ActionPerformed(evt);
+                jTextFieldContraseñaNuevaActionPerformed(evt);
             }
         });
-        jPanel17.add(jTextFieldNombreUsuario8);
-        jTextFieldNombreUsuario8.setBounds(150, 170, 190, 30);
+        jPanel17.add(jTextFieldContraseñaNueva);
+        jTextFieldContraseñaNueva.setBounds(150, 170, 190, 30);
 
-        BoxSexo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Privilegio", "Administrador", "Vendedor", " ", " " }));
-        jPanel17.add(BoxSexo2);
-        BoxSexo2.setBounds(140, 120, 160, 22);
+        BoxPrivilegioNuevo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Privilegio", "Administrador", "Vendedor", " ", " " }));
+        jPanel17.add(BoxPrivilegioNuevo);
+        BoxPrivilegioNuevo.setBounds(140, 120, 160, 26);
 
         jLabel45.setText("Userame");
         jPanel17.add(jLabel45);
-        jLabel45.setBounds(20, 80, 60, 14);
+        jLabel45.setBounds(20, 80, 60, 16);
 
         jLabel46.setText("Privilegio");
         jPanel17.add(jLabel46);
-        jLabel46.setBounds(20, 120, 60, 14);
+        jLabel46.setBounds(20, 120, 60, 16);
 
-        jButton4.setBackground(new java.awt.Color(0, 183, 183));
-        jButton4.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
-        jButton4.setText("Guardar\n");
-        jPanel17.add(jButton4);
-        jButton4.setBounds(240, 300, 90, 27);
+        BotonCancelarNuevoUsuario.setBackground(new java.awt.Color(255, 51, 51));
+        BotonCancelarNuevoUsuario.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
+        BotonCancelarNuevoUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        BotonCancelarNuevoUsuario.setText("Cancelar");
+        BotonCancelarNuevoUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonCancelarNuevoUsuarioActionPerformed(evt);
+            }
+        });
+        jPanel17.add(BotonCancelarNuevoUsuario);
+        BotonCancelarNuevoUsuario.setBounds(260, 300, 90, 34);
+
+        BotonGuardarNuevoUsuario.setBackground(new java.awt.Color(0, 183, 183));
+        BotonGuardarNuevoUsuario.setFont(new java.awt.Font("Gill Sans MT Condensed", 1, 14)); // NOI18N
+        BotonGuardarNuevoUsuario.setText("Guardar\n");
+        BotonGuardarNuevoUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonGuardarNuevoUsuarioActionPerformed(evt);
+            }
+        });
+        jPanel17.add(BotonGuardarNuevoUsuario);
+        BotonGuardarNuevoUsuario.setBounds(130, 300, 90, 34);
 
         jInternalFrame2.getContentPane().add(jPanel17);
         jPanel17.setBounds(550, 20, 370, 360);
@@ -794,7 +863,7 @@ public class principal extends javax.swing.JFrame {
                 .addComponent(jButton11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 402, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 386, Short.MAX_VALUE)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -939,7 +1008,7 @@ public class principal extends javax.swing.JFrame {
                     .addComponent(jComboBox_Numerofactura, 0, 153, Short.MAX_VALUE))
                 .addGap(81, 81, 81)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(87, 87, 87))
         );
@@ -1064,7 +1133,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel23)
                     .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addContainerGap(238, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1077,7 +1146,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(jLabel18))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
@@ -1162,6 +1231,11 @@ public class principal extends javax.swing.JFrame {
 
         jPanel19.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 600, 120));
 
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
         jTextField9.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField9KeyTyped(evt);
@@ -1462,9 +1536,9 @@ public class principal extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jLabel4MouseClicked
 
-    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
+    private void jComboBoxTipoEstadísticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTipoEstadísticaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5ActionPerformed
+    }//GEN-LAST:event_jComboBoxTipoEstadísticaActionPerformed
 
     private void jLabelComprasMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelComprasMouseMoved
         // TODO add your handling code here:
@@ -1478,6 +1552,8 @@ public class principal extends javax.swing.JFrame {
         Ventas.setVisible(false);
         Renta.setVisible(false);
         jPanelEstadísticas.setVisible(false);
+        //llamar clase mostrarusuarios.java
+        //obtener datos y mostrar en TablaUSuarios
     }//GEN-LAST:event_jLabelUsuariosMouseClicked
 
     private void jLabelUsuariosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelUsuariosMouseExited
@@ -1519,37 +1595,37 @@ public class principal extends javax.swing.JFrame {
         jTabbedPaneUsuarios.setVisible(false);
     }//GEN-LAST:event_jLabelComprasMouseClicked
 
-    private void jTextFieldNombreUsuario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuario3ActionPerformed
+    private void jTextFieldNombreUsuarioNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuarioNuevoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreUsuario3ActionPerformed
+    }//GEN-LAST:event_jTextFieldNombreUsuarioNuevoActionPerformed
 
-    private void jTextFieldNombreUsuario4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuario4ActionPerformed
+    private void jTextFieldCorreoNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCorreoNuevoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreUsuario4ActionPerformed
+    }//GEN-LAST:event_jTextFieldCorreoNuevoActionPerformed
 
-    private void jTextFieldNombreUsuario5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuario5ActionPerformed
+    private void jTextFieldTelefonoNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTelefonoNuevoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreUsuario5ActionPerformed
+    }//GEN-LAST:event_jTextFieldTelefonoNuevoActionPerformed
 
-    private void jTextFieldNombreUsuario6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuario6ActionPerformed
+    private void jTextFieldUsernameNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUsernameNuevoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreUsuario6ActionPerformed
+    }//GEN-LAST:event_jTextFieldUsernameNuevoActionPerformed
 
-    private void jTextFieldNombreUsuario7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuario7ActionPerformed
+    private void jTextFieldContraseñaNuevaConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldContraseñaNuevaConfirmarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreUsuario7ActionPerformed
+    }//GEN-LAST:event_jTextFieldContraseñaNuevaConfirmarActionPerformed
 
-    private void jTextFieldNombreUsuario8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuario8ActionPerformed
+    private void jTextFieldContraseñaNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldContraseñaNuevaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreUsuario8ActionPerformed
+    }//GEN-LAST:event_jTextFieldContraseñaNuevaActionPerformed
 
-    private void jTextFieldNombreUsuario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuario2ActionPerformed
+    private void jTextFieldContraseñaconfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldContraseñaconfirmActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreUsuario2ActionPerformed
+    }//GEN-LAST:event_jTextFieldContraseñaconfirmActionPerformed
 
-    private void jTextFieldNombreUsuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuario1ActionPerformed
+    private void jTextFieldCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCorreoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreUsuario1ActionPerformed
+    }//GEN-LAST:event_jTextFieldCorreoActionPerformed
 
     private void jTextFieldNombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreUsuarioActionPerformed
         // TODO add your handling code here:
@@ -1735,6 +1811,68 @@ public class principal extends javax.swing.JFrame {
         compras.setLoginid(lg);
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void jTextFieldTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTelefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldTelefonoActionPerformed
+
+    private void jTextFieldContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldContraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldContraseñaActionPerformed
+
+    private void BotonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonModificarActionPerformed
+        // TODO add your handling code here:
+        //Obtener numero de fila de tabla y mostrar PanelModificar 
+        //llenar labels con info a modificar del numero de la fila obtenida
+    }//GEN-LAST:event_BotonModificarActionPerformed
+
+    private void BotonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarActionPerformed
+        // TODO add your handling code here:
+        //Obtener datos de labels y modificar datos de tabla (id no modificable)
+        //despues de insertar eliminar datos de label y ocultar panelModificar
+    }//GEN-LAST:event_BotonGuardarActionPerformed
+
+    private void BotonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCancelarActionPerformed
+        // TODO add your handling code here:
+        //eliminar datos de labels y ocultar panelmodificar
+    }//GEN-LAST:event_BotonCancelarActionPerformed
+
+    private void BotonGuardarNuevoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarNuevoUsuarioActionPerformed
+        // TODO add your handling code here:
+        //Verificar que se hallan llenado todos los campos
+        //Solicitar contraseña de administrador para guardar cambios
+        //Obtener datos de labels
+        //Enviar datos a CrearUsuario.java
+        //Si insertó "mensaje exito"
+        //limpiar labels
+    }//GEN-LAST:event_BotonGuardarNuevoUsuarioActionPerformed
+
+    private void BotonCancelarNuevoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCancelarNuevoUsuarioActionPerformed
+        // TODO add your handling code here:
+        //Limpiar labels
+    }//GEN-LAST:event_BotonCancelarNuevoUsuarioActionPerformed
+
+    private void BotonVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVerActionPerformed
+        // TODO add your handling code here:
+        //Obtener datos para filtro estadisticas
+        String tipo = jComboBoxTipoEstadística.getName();
+        String mes = jComboBoxMes.getName();
+        String anio = jComboBoxAnio.getName();
+        
+        //llamar MostrarEstadisticas.java y enviar datos para consulta
+        //mostrar tabla creada de estadisticas (no modificable)
+    }//GEN-LAST:event_BotonVerActionPerformed
+
+    private void BotonGuardarEstadisticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarEstadisticaActionPerformed
+        // TODO add your handling code here:
+        //Llamar a imprimir.java
+        //enviar tabla de estadistica (si existe)
+        //mostrar mensaje de exito
+    }//GEN-LAST:event_BotonGuardarEstadisticaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1771,14 +1909,21 @@ public class principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> BoxSexo;
-    private javax.swing.JComboBox<String> BoxSexo1;
-    private javax.swing.JComboBox<String> BoxSexo2;
+    private javax.swing.JButton BotonCancelar;
+    private javax.swing.JButton BotonCancelarNuevoUsuario;
+    private javax.swing.JButton BotonGuardar;
+    private javax.swing.JButton BotonGuardarEstadistica;
+    private javax.swing.JButton BotonGuardarNuevoUsuario;
+    private javax.swing.JButton BotonModificar;
+    private javax.swing.JButton BotonVer;
+    private javax.swing.JComboBox<String> BoxPrivilegioNuevo;
+    private javax.swing.JComboBox<String> BoxSexoNuevo;
+    private javax.swing.JPanel PanelModificar;
     private javax.swing.JTabbedPane Renta;
+    private javax.swing.JTable TablaUsuarios;
     private javax.swing.JTabbedPane Ventas;
     private javax.swing.JButton agregar;
     private javax.swing.JTextField cantidad;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -1789,10 +1934,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -1800,13 +1942,13 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JComboBox<String> jComboBox9;
+    private javax.swing.JComboBox<String> jComboBoxAnio;
     private javax.swing.JComboBox<String> jComboBoxEstadoUsuario;
-    private javax.swing.JComboBox<String> jComboBoxEstadoUsuario1;
+    private javax.swing.JComboBox<String> jComboBoxEstadoUsuarioNuevo;
+    private javax.swing.JComboBox<String> jComboBoxMes;
+    private javax.swing.JComboBox<String> jComboBoxTipoEstadística;
     private javax.swing.JComboBox<String> jComboBox_Numerofactura;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame2;
@@ -1882,7 +2024,6 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
@@ -1912,7 +2053,6 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
     private javax.swing.JTable jTable6;
     private javax.swing.JTable jTable7;
@@ -1928,14 +2068,16 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jTextFieldContraseña;
+    private javax.swing.JTextField jTextFieldContraseñaNueva;
+    private javax.swing.JTextField jTextFieldContraseñaNuevaConfirmar;
+    private javax.swing.JTextField jTextFieldContraseñaconfirm;
+    private javax.swing.JTextField jTextFieldCorreo;
+    private javax.swing.JTextField jTextFieldCorreoNuevo;
     private javax.swing.JTextField jTextFieldNombreUsuario;
-    private javax.swing.JTextField jTextFieldNombreUsuario1;
-    private javax.swing.JTextField jTextFieldNombreUsuario2;
-    private javax.swing.JTextField jTextFieldNombreUsuario3;
-    private javax.swing.JTextField jTextFieldNombreUsuario4;
-    private javax.swing.JTextField jTextFieldNombreUsuario5;
-    private javax.swing.JTextField jTextFieldNombreUsuario6;
-    private javax.swing.JTextField jTextFieldNombreUsuario7;
-    private javax.swing.JTextField jTextFieldNombreUsuario8;
+    private javax.swing.JTextField jTextFieldNombreUsuarioNuevo;
+    private javax.swing.JTextField jTextFieldTelefono;
+    private javax.swing.JTextField jTextFieldTelefonoNuevo;
+    private javax.swing.JTextField jTextFieldUsernameNuevo;
     // End of variables declaration//GEN-END:variables
 }

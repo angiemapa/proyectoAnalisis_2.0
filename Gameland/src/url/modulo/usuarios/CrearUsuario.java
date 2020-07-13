@@ -10,5 +10,10 @@ package url.modulo.usuarios;
  * @author PAOLITA
  */
 public class CrearUsuario {
-    
+    //Recibir info de jPaneUSuarios
+   //Obtener tabla usuarios
+    //velificar si ya existe el username
+    //Devolver valor (1) exito, (0) failed.
+   //insertar a tabla usuarios  
+    //Devolver valor (1) exito, (0) failed.
 }

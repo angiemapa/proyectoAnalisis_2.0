@@ -10,5 +10,6 @@ package url.modulo.usuarios;
  * @author PAOLITA
  */
 public class MostrarUsuarios {
-    
+    //Obtener tabla de Usuarios (activos y no activos)
+     //retornar tabla a form principal<
 }

@@ -10,5 +10,7 @@ package url.modulo.estadisticas;
  * @author PAOLITA
  */
 public class MostrarEstadisticas {
-    
+    //Consulta estadisticas segun filtros (compras, mes, anio)
+    //Crear tabla estadísticas (id, fecha, proveedor/cliente (segun filtro), total, usuario
+    //devolver tabla con filtro
 }
