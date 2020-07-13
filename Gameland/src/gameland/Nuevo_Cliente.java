@@ -6,6 +6,7 @@
 package gameland;
 
 import javax.swing.JOptionPane;
+import url.moculo.ventas.CrearCliente;
 
 /**
  *
@@ -169,6 +170,9 @@ public class Nuevo_Cliente extends javax.swing.JFrame {
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
         this.setVisible(false);
+         CrearCliente nuevo_cliente=new CrearCliente();
+        String mensaje=nuevo_cliente.insertarCliente(nit.getText(), nom.getText(), direc.getText(), telefono.getText());
+        JOptionPane.showMessageDialog(rootPane,mensaje);
     }//GEN-LAST:event_aceptarActionPerformed
 
     private void nomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nomKeyTyped
