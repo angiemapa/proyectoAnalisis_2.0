@@ -199,5 +199,21 @@ public class UsuarioJpaController implements Serializable {
             em.close();
         }
     }
+     public void actualizarExistencia(Usuario usuario){
+        EntityManager em = getEntityManager();
+        try {
+            em.getTransaction().begin();
+            Query updateUsuario = em.createNativeQuery("UPDATE Usuario SET Usuario.nombre = ?, Usuario.dpi = ? WHERE Usuario.id = ?");
+            updateUsuario.setParameter(1,usuario.getNombre());
+            updateUsuario.setParameter(2,usuario.getDpi());
+            updateUsuario.setParameter(3,usuario.getId());
+            updateUsuario.executeUpdate();
+            em.getTransaction().commit();
+        } finally {
+            if (em != null) {
+              
+            }
+        }
+    }
     
 }

@@ -1,6 +1,7 @@
 
 package url.conexionBD;
 
+import java.beans.PersistenceDelegate;
 import java.util.Map;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -23,7 +24,7 @@ public class Conexion {
     public static EntityManagerFactory obtenerConexion(){
     
         if(Conexion.em==null){
-            Conexion.emf= Persistence.createEntityManagerFactory("game", null);
+            Conexion.emf= Persistence.createEntityManagerFactory("game");
         }
         return emf;
     }

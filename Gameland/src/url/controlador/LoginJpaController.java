@@ -5,6 +5,7 @@
  */
 package url.controlador;
 
+import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.io.Serializable;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
@@ -281,6 +282,18 @@ public class LoginJpaController implements Serializable {
         } finally {
             em.close();
         }
+    }
+    public Login buscar(String usuario, String contraseña){
+        List<Login> lista = new ArrayList();
+        Login lg ;
+        lista =  findLoginEntities();
+        for (int i = 0; i < lista.size(); i++) {
+            if(lista.get(i).getUsuario().equals(usuario) && lista.get(i).getContraseña().equals(contraseña)){
+                lg = lista.get(i);
+                return lg;
+            }
+        }
+        return null;
     }
     
 }

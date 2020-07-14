@@ -195,5 +195,15 @@ public class ClienteJpaController implements Serializable {
             em.close();
         }
     }
+    public Cliente buscar(String nit){
+        List<Cliente> listaclientes = new ArrayList<Cliente>();
+        listaclientes = findClienteEntities();
+        for (int i = 0; i < listaclientes.size(); i++) {
+            if(listaclientes.get(i).getNit().equalsIgnoreCase(nit)){
+                return listaclientes.get(i);
+            }
+        }
+        return null;
+    }
     
 }

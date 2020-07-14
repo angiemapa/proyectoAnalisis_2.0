@@ -5,7 +5,11 @@
  */
 package gameland;
 
+import javax.persistence.EntityManagerFactory;
 import javax.swing.JOptionPane;
+import url.conexionBD.Conexion;
+import url.controlador.ClienteJpaController;
+import url.controladorBD.Cliente;
 import url.moculo.ventas.CrearCliente;
 
 /**
@@ -22,6 +26,9 @@ public class Nuevo_Cliente extends javax.swing.JFrame {
          this.setLocationRelativeTo(null);
          aceptar.setEnabled(false);
     }
+    EntityManagerFactory emf = Conexion.obtenerConexion();
+    ClienteJpaController controlcliente = new ClienteJpaController(emf);
+    Cliente cliente;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -170,9 +177,13 @@ public class Nuevo_Cliente extends javax.swing.JFrame {
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
         this.setVisible(false);
-         CrearCliente nuevo_cliente=new CrearCliente();
-        String mensaje=nuevo_cliente.insertarCliente(nit.getText(), nom.getText(), direc.getText(), telefono.getText());
-        JOptionPane.showMessageDialog(rootPane,mensaje);
+        cliente = new Cliente();
+        cliente.setNombre(nom.getText());
+        cliente.setNit(nit.getText());
+        cliente.setDireccion(direc.getText());
+        cliente.setTelefono(telefono.getText());
+        controlcliente.create(cliente);
+        this.dispose();
     }//GEN-LAST:event_aceptarActionPerformed
 
     private void nomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nomKeyTyped

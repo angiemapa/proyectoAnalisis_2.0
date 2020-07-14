@@ -5,10 +5,13 @@
  */
 package url.modulo.login;
 
+import url.controladorBD.Login;
+
 /**
  *
  * @author PAOLITA
  */
 public interface ValidarUsuario {
-    
+    boolean validardatos(String usuario, String contraseña);
+    Login Getusuarioconfirmado();
 }

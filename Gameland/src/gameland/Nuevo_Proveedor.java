@@ -5,6 +5,11 @@
  */
 package gameland;
 
+import javax.persistence.EntityManagerFactory;
+import url.conexionBD.Conexion;
+import url.controlador.ProveedorJpaController;
+import url.controladorBD.Proveedor;
+
 /**
  *
  * @author USUARIO
@@ -17,7 +22,11 @@ public class Nuevo_Proveedor extends javax.swing.JFrame {
     public Nuevo_Proveedor() {
         initComponents();
         this.setTitle("AGREGAR NUEVO PROEVEEDOR");
+        this.setLocationRelativeTo(null);
     }
+    EntityManagerFactory emf = Conexion.obtenerConexion();
+    ProveedorJpaController controlproveedor = new ProveedorJpaController(emf);
+    Proveedor proveedor;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -49,6 +58,11 @@ public class Nuevo_Proveedor extends javax.swing.JFrame {
         jLabel4.setText("EMPRESA");
 
         jButton1.setText("AGREGAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,6 +116,19 @@ public class Nuevo_Proveedor extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        short estado = 1;
+        proveedor = new Proveedor();
+        proveedor.setEmpresa(jTextField4.getText());
+        proveedor.setDireccion(jTextField3.getText());
+        proveedor.setNombre(jTextField1.getText());
+        proveedor.setTelefono(jTextField2.getText());
+        proveedor.setEstado(estado);
+        controlproveedor.create(proveedor);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

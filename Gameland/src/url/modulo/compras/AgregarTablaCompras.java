@@ -8,13 +8,16 @@ package url.modulo.compras;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import url.conexionBD.Conexion;
 import url.controlador.DetalleCompraJpaController;
 import url.controlador.ProveedorJpaController;
+import url.controlador.VentaJpaController;
 import url.controladorBD.Proveedor;
 import url.controladorBD.DetalleCompra;
+import url.controladorBD.Venta;
 
 /**
  *
@@ -41,12 +44,23 @@ public class AgregarTablaCompras implements AgregarCompra{
         lisproveedor = control.findProveedorEntities();
         for (int i = 0; i < lisproveedor.size(); i++) {
             if(lisproveedor.get(i).getNombre().equals(nombre)){
-                proveedor = (Proveedor)control.findProveedor(lisproveedor.get(i).getId());
+                proveedor = (Proveedor) control.findProveedorEntities().get(i);
                 return proveedor;
             }
-        }
+         }
         return  null;
     }
-
+      @Override
+    public void Mostrarcompras(JTable detallecompras) {
+        VentaJpaController controlventa = new VentaJpaController(emf);
+        DefaultTableModel mod = (DefaultTableModel) detallecompras.getModel();
+        List<Venta> lis = new ArrayList<>();
+        lis = controlventa.findVentaEntities();
+        for (int i = 0; i < lis.size(); i++) {
+            Object[] o = new Object[]{lis.get(i).getNfactura(), lis.get(i).getFecha(), lis.get(i).getTotal()};
+            mod.addRow(o);
+        }
+        detallecompras.setModel(mod);
+    }
    
 }

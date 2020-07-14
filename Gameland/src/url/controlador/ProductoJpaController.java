@@ -253,5 +253,60 @@ public class ProductoJpaController implements Serializable {
             em.close();
         }
     }
+    public Producto buscarcodigo(String codigo){
+        Producto p1;
+        List<Producto> lis = new ArrayList<>();
+        lis = findProductoEntities();
+        for (int i = 0; i < lis.size(); i++) {
+            if(lis.get(i).getCodigo().equals(codigo)){
+                p1 = lis.get(i);
+                return  p1;
+            }
+        }
+        return null;
+    }
+     public Producto buscarnombre(String nombre){
+        Producto p1;
+        List<Producto> lis = new ArrayList<>();
+        lis = findProductoEntities();
+        for (int i = 0; i < lis.size(); i++) {
+            if(lis.get(i).getNombre().equals(nombre)){
+                p1 = lis.get(i);
+                return  p1;
+            }
+        }
+        return null;
+    }
+    public void actualizarpornobre(Producto producto){
+           EntityManager em = getEntityManager();
+        try {
+            em.getTransaction().begin();
+            Query updateProducto = em.createNativeQuery("UPDATE Producto SET Producto.cantidad = Producto.cantidad + ? WHERE Producto.nombre=?");
+            updateProducto.setParameter(1,producto.getCantidad());
+            updateProducto.setParameter(2,producto.getNombre());
+            updateProducto.executeUpdate();
+            em.getTransaction().commit();
+        } finally {
+            if (em != null) {
+              
+            }
+        }
+    
+    }
+     public void actualizarExistencia(Producto producto){
+        EntityManager em = getEntityManager();
+        try {
+            em.getTransaction().begin();
+            Query updateProducto = em.createNativeQuery("UPDATE Producto SET Producto.cantidad = Producto.cantidad + ? WHERE Producto.codigo=?");
+            updateProducto.setParameter(1,producto.getCantidad());
+            updateProducto.setParameter(2,producto.getCodigo());
+            updateProducto.executeUpdate();
+            em.getTransaction().commit();
+        } finally {
+            if (em != null) {
+              
+            }
+        }
+    }
     
 }
