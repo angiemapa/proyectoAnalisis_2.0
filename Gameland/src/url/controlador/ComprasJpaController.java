@@ -15,6 +15,7 @@ import url.controladorBD.Proveedor;
 import url.controladorBD.DetalleCompra;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import url.controlador.exceptions.IllegalOrphanException;
@@ -257,5 +258,4 @@ public class ComprasJpaController implements Serializable {
             em.close();
         }
     }
-    
 }

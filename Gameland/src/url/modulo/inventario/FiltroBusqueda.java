@@ -28,7 +28,7 @@ public class FiltroBusqueda {
         lisproductos = new ArrayList<>();
         lisproductos = controlproductos.findProductoEntities();
         for (int  i= 0; i < lisproductos.size(); i++) {
-            Object [] o = new Object[]{lisproductos.get(i).getCodigo(), lisproductos.get(i).getNombre(), lisproductos.get(i).getCantidad()};
+            Object [] o = new Object[]{lisproductos.get(i).getCodigo(), lisproductos.get(i).getNombre(),lisproductos.get(i).getDescripcion(), lisproductos.get(i).getCantidad()};
             modelo.addRow(o);
         }
         datos.setModel(modelo);

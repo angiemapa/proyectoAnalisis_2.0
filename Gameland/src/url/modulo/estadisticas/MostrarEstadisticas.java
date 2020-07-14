@@ -5,7 +5,7 @@
  */
 package url.modulo.estadisticas;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
@@ -30,36 +30,22 @@ public class MostrarEstadisticas {
     public void settabla(JTable tabla){
         this.tablacompras = tabla;
     }
-    
-    public void filtrarcompra(){
-        DefaultTableModel modelo = (DefaultTableModel) tablacompras.getModel();
-        limpiartabla();
+    //idcompra, fecha, proveedor, subtotal, total, usuario
+    public void filtrarcompra(JTable datos, Date fecha) {
+        DefaultTableModel modelo = (DefaultTableModel) datos.getModel();
+        limpiartabla(datos);
         liscompras = new ArrayList<>();
         liscompras = controlcompras.findComprasEntities();
         for (int i = 0; i < liscompras.size(); i++) {
-            Object [] o = new Object[]{liscompras.get(i).getId(), liscompras.get(i).getFecha(), liscompras.get(i).getProveedorid().getNombre(), liscompras.get(i).getTotal()};
+            System.out.println(fecha);
+            Object[] o = new Object[]{liscompras.get(i).getId(), liscompras.get(i).getFecha(),
+                liscompras.get(i).getProveedorid().getNombre(), 0, liscompras.get(i).getTotal(), liscompras.get(i).getLoginid().getUsuario()};
             modelo.addRow(o);
         }
-        tablacompras.setModel(modelo);
+        datos.setModel(modelo);
     }
-    public void filtrarpormes(Date mes) {
-        DefaultTableModel modelo = (DefaultTableModel) tablacompras.getModel();
-        limpiartabla();
-        liscompras = new ArrayList<>();
-        liscompras = controlcompras.findComprasEntities();
-        for (int i = 0; i < liscompras.size(); i++) {
-            if (liscompras.get(i).getFecha().getMonth() == mes.getMonth()) {
-                Object[] o = new Object[]{liscompras.get(i).getId(), liscompras.get(i).getFecha(), liscompras.get(i).getProveedorid().getNombre(), liscompras.get(i).getTotal()};
-                modelo.addRow(o);
-            }
-        }
-        tablacompras.setModel(modelo);
-    }
-    public JTable tablaconfiltro(){
-        return  tablacompras;
-    }
-    private void limpiartabla(){
-        DefaultTableModel mod = (DefaultTableModel) tablacompras.getModel();
+    private void limpiartabla(JTable datos){
+        DefaultTableModel mod = (DefaultTableModel) datos.getModel();
         mod.getDataVector().removeAllElements();
         mod.fireTableDataChanged();
     }

@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/url/modulo/inventario/FiltroBusqueda.java</file>
-            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/url/modulo/usuarios/MostrarUsuarios.java</file>
-            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/url/modulo/usuarios/CrearUsuario.java</file>
+            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/url/controlador/ProductoJpaController.java</file>
+            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/url/moculo/ventas/DescontarProducto.java</file>
             <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/gameland/Formulario_Principal.java</file>
+            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/gameland/LoginPrincipal.java</file>
         </group>
     </open-files>
 </project-private>
