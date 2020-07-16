@@ -717,6 +717,11 @@ public class Formulario_Principal extends javax.swing.JFrame {
         jPanel12.setMinimumSize(new java.awt.Dimension(900, 95));
 
         jTextField2.setText("BUSCAR PRODUCTO");
+        jTextField2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField2MouseClicked(evt);
+            }
+        });
         jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTextField2KeyPressed(evt);
@@ -741,6 +746,11 @@ public class Formulario_Principal extends javax.swing.JFrame {
         jButton8.setText("BUSCAR");
 
         jTextField4.setText("INGRESE # FACTURA");
+        jTextField4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField4MouseClicked(evt);
+            }
+        });
 
         jButton9.setText("CONFIRMAR");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -1515,6 +1525,7 @@ public class Formulario_Principal extends javax.swing.JFrame {
         jTextField3.setText("INGRESE LA CANTIDAD");
         jTextField6.setText("INGRESE EL TOTAL");
         jTextField2.requestFocus();
+        jTextField2.setText(null);
         JOptionPane.showMessageDialog(null, "COMPRA EXITOSA");
     }//GEN-LAST:event_jButton9ActionPerformed
 
@@ -1764,6 +1775,16 @@ public class Formulario_Principal extends javax.swing.JFrame {
         cantidad.setText(null);
         jTextField8.requestFocus();
     }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jTextField4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField4MouseClicked
+        // TODO add your handling code here:
+       jTextField4.setText(null);
+    }//GEN-LAST:event_jTextField4MouseClicked
+
+    private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
+        // TODO add your handling code here:
+        jTextField2.setText(null);
+    }//GEN-LAST:event_jTextField2MouseClicked
     private void llenartablaventa(Producto p){
         //producto,descripcion,punidad, cantidad
         DefaultTableModel model = (DefaultTableModel) jTable6.getModel();

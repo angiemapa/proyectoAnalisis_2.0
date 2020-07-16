@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/url/controlador/ProductoJpaController.java</file>
-            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/url/moculo/ventas/DescontarProducto.java</file>
+            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/url/modulo/compras/ConfirmarCompra.java</file>
+            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/url/modulo/compras/ActualizarExistencia.java</file>
+            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/url/modulo/compras/AgregarProducto.java</file>
+            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/url/modulo/compras/AgregarCompra.java</file>
             <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/gameland/Formulario_Principal.java</file>
-            <file>file:/D:/Usuariofernando/Fernando/NetBeansProjects/proyectoAnalisis_2.0/Gameland/src/gameland/LoginPrincipal.java</file>
         </group>
     </open-files>
 </project-private>
